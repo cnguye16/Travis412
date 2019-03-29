@@ -29,4 +29,10 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.divide(25, 5), 5);
 	}
+	
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDivideByZero() {
+		SimpleCalculator calc = new SimpleCalculator();
+		calc.divideByZero(11.9, 0);
+	}
 }
