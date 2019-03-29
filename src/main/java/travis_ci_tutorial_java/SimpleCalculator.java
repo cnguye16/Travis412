@@ -16,4 +16,11 @@ public class SimpleCalculator {
 	public int divide(int a, int b) {
 		return a / b;
 	}
+	
+	public double divideByZero(double a, double b) {
+		if (b == 0) {
+			throw new java.lang.ArithmeticException("Cannot divide by zero!");
+		}
+		return a / b;	
+	}
 }
